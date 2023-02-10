@@ -1,3 +1,2 @@
 #!/bin/bash
 sudo apt-get install mplayer
-mplayer -vo caca StarWarsIV.mkv
