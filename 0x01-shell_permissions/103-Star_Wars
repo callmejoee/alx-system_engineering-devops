@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo apt-get install mplayer
+telnet towel.blinkenlights.nl
