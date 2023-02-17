@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {{a..z}{a..z}}
+echo {a..z}{a..z}"\n" | head -676 | grep -v "oo"
