@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# code to make a virtual clock
+
+hour=0
+while [ $hour -le 12 ]
+do 
+    echo "Hour: $hour"
+    hour=$((hour+1))
+    minutes=0
+    while [ $minutes -lt 60 ]
+    do
+	    echo "$minutes"
+	    minutes=$((minutes+1))
+    done
+done
