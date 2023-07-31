@@ -2,7 +2,7 @@
 # gives information about file called school
 
 file=school
-if test -f "$file" 
+if test -e "$file" 
 then
 	echo "school file exists"
 
