@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# this code resolves the ips to these hosts
+
+ip_adds=$(hostname -I)
+
+ip_adds=("${ip_adds//" "/ }")
+
+for ip in "${ip_adds[@]}";
+do
+  printf "%s\n" "$ip"
+done
