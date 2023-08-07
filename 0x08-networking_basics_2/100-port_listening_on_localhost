@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # this code resolves the ips to these hosts
 
-nc localhost 98
+nc -l localhost 98
