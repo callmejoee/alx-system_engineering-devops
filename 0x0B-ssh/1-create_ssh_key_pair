@@ -2,5 +2,3 @@
 #Write a Bash script that creates an RSA key pair.
 
 ssh-keygen -f ~/.ssh/school -t rsa -b 4096
-betty
-betty
