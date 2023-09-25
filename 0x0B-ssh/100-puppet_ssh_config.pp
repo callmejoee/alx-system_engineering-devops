@@ -1,6 +1,3 @@
 exec { 'Host':
-  command => 'Host ubuntu
-        Hostname 54.160.116.97
-        user Youssef
-        IdentifyFile ~/.ssh/school',
+  command => 'ssh -i ~/.ssh/school ubuntu@54.160.116.97',
 }
