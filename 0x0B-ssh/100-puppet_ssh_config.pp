@@ -1,3 +1,3 @@
-exec { 'Host':
+exec { 'ssh':
   command => 'ssh -i ~/.ssh/school ubuntu@54.160.116.97',
 }
