@@ -2,16 +2,17 @@
 # script to copy file from host to server
 
 
-if [ $# -ne 4 ]; then
+if [ $# -lt 3 ] || [ $# -gt 4 ]; then
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
     exit 1
 fi
-
-export SCP_OPTIONS="-o StrictHostKeyChecking=no"
 
 file=$1
 ip=$2
 username=$3
 ssh_key=$4
 
-scp -i $ssh_key $file $username@$ip:~/
+if [ $# == 4 ]; then
+    scp -i $ssh_key $file $username@$ip:~/
+elif [ $# == 3 ]; then
+    scp -o StrictHostKeyChecking=no $file $username@$ip:~/
