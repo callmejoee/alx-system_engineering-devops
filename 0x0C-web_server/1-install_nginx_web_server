@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This is a script to install nginx
 
-sudo apt get -y update
+sudo apt-get -y update
 sudo apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.html
