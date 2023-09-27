@@ -16,3 +16,4 @@ if [ $# == 4 ]; then
     scp -i $ssh_key $file $username@$ip:~/
 elif [ $# == 3 ]; then
     scp -o StrictHostKeyChecking=no $file $username@$ip:~/
+fi
