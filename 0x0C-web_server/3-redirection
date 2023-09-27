@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
-# configured as a "301 Moved Permanently"
+# Script to do task2
 
 apt-get update
 apt-get install -y nginx
 
+sudo ufw allow 'Nginx HTTP'
+sudo service nginx start
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
+
 echo "Hello Word!" > /etc/nginx/html/index.html
 printf %s "server {
     listen 80;
@@ -17,4 +20,4 @@ printf %s "server {
     }
 }" > /etc/nginx/sites-available/default
 
-service nginx restart
+sudo service nginx restart
