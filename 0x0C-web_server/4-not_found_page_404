@@ -3,8 +3,6 @@
 
 apt-get update
 apt-get install -y nginx
-sudo ufw allow 'Nginx HTTP'
-sudo service nginx start
 
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
@@ -22,8 +20,8 @@ printf %s "server {
     }
 
     error_page 404 /404.html;
-    location = /404 {
-        root /etc/nginx/html;
+    location /404 {
+      root /etc/nginx/html;
     }
 }" > /etc/nginx/sites-available/default
 
