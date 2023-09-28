@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Script to do task2
+# 404 page
 
 apt-get update
 apt-get install -y nginx
@@ -23,8 +23,8 @@ printf %s "server {
     error_page 404 /404.html;
     location /404 {
       root /etc/nginx/html;
-      internal
+      internal;
     }
 }" > /etc/nginx/sites-available/default
 
-sudo service nginx restart
+service nginx restart
