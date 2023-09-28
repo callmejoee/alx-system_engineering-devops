@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Script to do task2
+
+apt-get update
+apt-get install -y nginx
+
+sudo ufw allow 'Nginx HTTP'
+sudo service nginx start
+mkdir /etc/nginx/html
+touch /etc/nginx/html/404.html
+
+echo "Ceci n'est pas une page" > /etc/nginx/html/404.html
+printf %s "server{
+        listen 80 default_server;
+
+	error_page 404 /404.html;
+        location = /404.html {
+                    root /var/www/html;
+        }
+
+}" > /etc/nginx/sites-available/default
+
+sudo service nginx restart
