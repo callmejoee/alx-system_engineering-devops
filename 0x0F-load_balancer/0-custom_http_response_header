@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# this configures the web server and adds custom http resonse header
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo 'Hello World!' > /var/www/html/index.html
+sudo sed -i '/server_tokens off;/a \        add_header X-Served-By $hostname;' /etc/nginx/nginx.conf
+sudo service nginx start
