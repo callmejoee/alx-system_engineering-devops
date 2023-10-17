@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if a username is provided as an argument
+if [ $# -eq 0 ]; then
+  echo "Usage: ./0-iamsomeoneelse <username>"
+  exit 1
+fi
+
+# Run the whoami command under the specified user
+sudo -u "$1" whoami
